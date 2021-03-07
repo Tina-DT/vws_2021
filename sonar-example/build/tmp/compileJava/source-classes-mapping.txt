@@ -1,0 +1,6 @@
+com/javatechie/app/sonar_example/RollTheDice.java
+ com.javatechie.app.sonar_example.RollTheDice
+com/javatechie/app/sonar_example/App2.java
+ com.javatechie.app.sonar_example.App2
+com/javatechie/app/sonar_example/App.java
+ com.javatechie.app.sonar_example.App
