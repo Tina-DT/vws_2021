@@ -3,22 +3,22 @@ pipeline {
     agent any
 
 
-    environment {
-    //Use Pipeline Utility Steps plugin to read information from pom.xml into env variables
-    IMAGE = readMavenPom().getArtifactId()
-    VERSION = readMavenPom().getVersion()
-    }
-
-
     stages {
 
-        stage('Test') {
+        stage ('Hello') {
+            agent any
+
             steps {
-                echo "${VERSION}"
+                echo 'Hello, '
+
+                sh '''#!/bin/bash
+
+                    echo "Hello from bash"
+                    echo "Who I'm $SHELL"
+                '''
             }
-
         }
-
     }
+
 
 }
