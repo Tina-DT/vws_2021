@@ -40,8 +40,10 @@ jobs:
         - run: mkdir staging
         - uses: actions/upload-artifact@v1
           with:
-            name: Package
-            path: staging
+            username: ${{ secrets.DOCKER_USERNAME }}
+            password: ${{ secrets.DOCKER_PASSWORD }}
+            repository: ${{ secrets.DOCKER_REPO }}:latest
+            tag_with_ref: true
   
   build-docker-image:
     name: Publish to Docker Hub
